@@ -7,6 +7,8 @@ In the end, Raph would like to have 3 arrays:
 2) Containing all three final paid amounts (bill + tip).
 3) use the array method filter to create a new array called copy that only contains the final paid amounts over $100. */
 
+let finalBill = [140, 45, 270];
+
 function tipCalculator(bill){
     if(bill < 50){
         return bill * .2;
@@ -19,8 +21,6 @@ function tipCalculator(bill){
     }
 }
 
-let finalBill = [140, 45, 270];
-
 let tips = [tipCalculator(finalBill[0]), tipCalculator(finalBill[1]), tipCalculator(finalBill[2])];
 
 let billAndTip = [(finalBill[0] + tips[0]), (finalBill[1] + tips[1]), (finalBill[2] + tips[2])];
@@ -29,8 +29,13 @@ function hundred(value) {
     return value >= 100;
   }
   
-  let overHundred = billAndTip.filter(hundred);
+let overHundred = billAndTip.filter(hundred);
 
-  console.log(overHundred);
+console.log(`Bill values are ${finalBill}`);
+console.log(`Tip values are ${tips}`);
+console.log(`Bill plus tips are ${billAndTip}`);
+console.log(`Over a hundred is ${overHundred}`);
+
+
 
   
